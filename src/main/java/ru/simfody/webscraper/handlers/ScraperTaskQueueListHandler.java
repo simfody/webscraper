@@ -11,7 +11,7 @@ import java.util.List;
 @Component("scraperTaskQueueListHandler")
 public class ScraperTaskQueueListHandler {
 
-    public boolean studyScraper(List<ScraperTask> scraperTaskQueueList, List<ScraperTask> scraperTaskLogList) {
+    public boolean studyScraper(List<ScraperTask> stQueueList, List<ScraperTask> stLogList) {
         String baseUrl = "https://news.ycombinator.com/" ;
         WebClient client = new WebClient();
         client.getOptions().setCssEnabled(false);

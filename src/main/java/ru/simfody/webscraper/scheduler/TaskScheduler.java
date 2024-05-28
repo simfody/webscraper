@@ -14,8 +14,8 @@ import java.util.List;
 @EnableAsync
 @Component("taskScheduler")
 public class TaskScheduler {
-    private List<ScraperTask>           scraperTaskQueueList = new ArrayList<>();
-    private List<ScraperTask>            stLogList   = new ArrayList<>();
+    private List<ScraperTask>           stQueueList  = new ArrayList<>();
+    private List<ScraperTask>           stLogList   = new ArrayList<>();
     private ScraperTaskQueueListHandler scraperTaskQueueListHandler;
 
     public TaskScheduler(ScraperTaskQueueListHandler scraperTaskQueueListHandler) {this.scraperTaskQueueListHandler = scraperTaskQueueListHandler;}
@@ -24,9 +24,9 @@ public class TaskScheduler {
     @Async
     @Scheduled(fixedRate = 10000)
     public void scraperTaskQueueListHandlerRuner() {
-        if(scraperTaskQueueList.size() != 0) return;
+        if(stQueueList.size() != 0) return;
         scraperTaskQueueListMaker();
-        scraperTaskQueueListHandler.studyScraper(scraperTaskQueueList, stLogList);
+        scraperTaskQueueListHandler.studyScraper(stQueueList, stLogList);
     }
 
     private void scraperTaskQueueListMaker() {
