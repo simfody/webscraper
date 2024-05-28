@@ -4,7 +4,6 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Component;
 import org.springframework.scheduling.annotation.Scheduled;
-import ru.simfody.webscraper.detail.ScraperLog;
 import ru.simfody.webscraper.detail.ScraperTask;
 import ru.simfody.webscraper.handlers.ScraperTaskQueueListHandler;
 

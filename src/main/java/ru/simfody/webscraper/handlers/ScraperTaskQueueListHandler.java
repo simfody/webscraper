@@ -3,7 +3,6 @@ package ru.simfody.webscraper.handlers;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import org.springframework.stereotype.Component;
-import ru.simfody.webscraper.detail.ScraperLog;
 import ru.simfody.webscraper.detail.ScraperTask;
 
 import java.util.List;
