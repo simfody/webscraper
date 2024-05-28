@@ -12,7 +12,7 @@ import java.util.List;
 @Component("taskScheduler")
 public class TaskScheduler {
     private List<ScraperTask> scraperTaskQueueList = new ArrayList<>();
-    private boolean           busy = false;
+    private boolean           busy = true;
     private ScraperTaskQueueListHandler scraperTaskQueueListHandler;
 
     public TaskScheduler(ScraperTaskQueueListHandler scraperTaskQueueListHandler) {
@@ -21,6 +21,7 @@ public class TaskScheduler {
     // Запуск каждые 60 сек.
     @Scheduled(fixedRate = 60000)
     public void scraperTaskQueueListHandlerRuner() {
-
+        busy = true;
+        busy = scraperTaskQueueListHandler.studyScraper();
     }
 }
