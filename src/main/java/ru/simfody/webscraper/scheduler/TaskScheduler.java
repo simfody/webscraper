@@ -16,7 +16,7 @@ import java.util.List;
 @Component("taskScheduler")
 public class TaskScheduler {
     private List<ScraperTask>           scraperTaskQueueList = new ArrayList<>();
-    private List<ScraperLog>            scraperTaskLogList   = new ArrayList<>();
+    private List<ScraperTask>            stLogList   = new ArrayList<>();
     private ScraperTaskQueueListHandler scraperTaskQueueListHandler;
 
     public TaskScheduler(ScraperTaskQueueListHandler scraperTaskQueueListHandler) {this.scraperTaskQueueListHandler = scraperTaskQueueListHandler;}
@@ -27,7 +27,7 @@ public class TaskScheduler {
     public void scraperTaskQueueListHandlerRuner() {
         if(scraperTaskQueueList.size() != 0) return;
         scraperTaskQueueListMaker();
-        scraperTaskQueueListHandler.studyScraper(scraperTaskQueueList, scraperTaskLogList);
+        scraperTaskQueueListHandler.studyScraper(scraperTaskQueueList, stLogList);
     }
 
     private void scraperTaskQueueListMaker() {
