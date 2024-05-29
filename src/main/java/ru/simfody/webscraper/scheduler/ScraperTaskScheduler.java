@@ -20,7 +20,6 @@ public class ScraperTaskScheduler {
 
     public ScraperTaskScheduler(ScraperTaskQueueListHandler scraperTaskQueueListHandler) {
         this.scraperTaskQueueListHandler = scraperTaskQueueListHandler;
-        System.out.println("test -> constr");
     }
 
     // Запуск каждые 10 сек.
