@@ -29,7 +29,7 @@ public class ScraperTaskScheduler {
         System.out.println("test -> ");
         if(stQueueList.size() != 0) return;
         scraperTaskQueueListMaker();
-        scraperTaskQueueListHandler.studyScraper(stQueueList, stLogList);
+      //  scraperTaskQueueListHandler.studyScraper(stQueueList, stLogList);
     }
 
     private void scraperTaskQueueListMaker() {
