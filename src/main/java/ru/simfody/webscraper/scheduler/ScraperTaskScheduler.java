@@ -12,18 +12,22 @@ import java.util.List;
 
 // 28.05.2024
 @EnableAsync
-@Component("taskScheduler")
-public class TaskScheduler {
+@Component("scrapertaskScheduler")
+public class ScraperTaskScheduler {
     private List<ScraperTask>           stQueueList  = new ArrayList<>();
     private List<ScraperTask>           stLogList   = new ArrayList<>();
     private ScraperTaskQueueListHandler scraperTaskQueueListHandler;
 
-    public TaskScheduler(ScraperTaskQueueListHandler scraperTaskQueueListHandler) {this.scraperTaskQueueListHandler = scraperTaskQueueListHandler;}
+    public ScraperTaskScheduler(ScraperTaskQueueListHandler scraperTaskQueueListHandler) {
+        this.scraperTaskQueueListHandler = scraperTaskQueueListHandler;
+        System.out.println("test -> constr");
+    }
 
     // Запуск каждые 10 сек.
     @Async
     @Scheduled(fixedRate = 10000)
     public void scraperTaskQueueListHandlerRuner() {
+        System.out.println("test -> ");
         if(stQueueList.size() != 0) return;
         scraperTaskQueueListMaker();
         scraperTaskQueueListHandler.studyScraper(stQueueList, stLogList);
