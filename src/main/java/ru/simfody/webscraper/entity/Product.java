@@ -10,4 +10,6 @@ public class Product {
     private Long id;
     @Column(length = 35, nullable = false)
     private String name;
+    @ManyToOne
+    private Client clientId;
 }
