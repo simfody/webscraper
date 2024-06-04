@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 // 03.06.2024
 @Entity
-public class SiteForParse {
+public class SiteForParseParam {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

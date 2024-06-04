@@ -13,7 +13,7 @@ public class ContentLocation {
     @ManyToOne
     private Product productId;
     @ManyToOne
-    private SiteForParse siteForParseId;
+    private SiteForParseParam siteForParseParamId;
     @ManyToOne
     private FieldContentType fieldContentTypeId;
     @ManyToOne
