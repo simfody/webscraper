@@ -10,4 +10,5 @@ public class SiteForParseParam {
     private Long id;
     @Column(length = 25, nullable = false)
     private String name;
+    private int minSecondsBetweenRequests = 10;
 }
