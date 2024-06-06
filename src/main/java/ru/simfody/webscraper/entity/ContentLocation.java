@@ -11,6 +11,8 @@ public class ContentLocation {
     @Column(length = 25, nullable = false)
     private String name;
     @ManyToOne
+    private Client clientId;
+    @ManyToOne
     private Product productId;
     @ManyToOne
     private ParseSite siteForParseParamId;
