@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 // 03.06.2024
 @Entity
-public class ContentLocation {
+public class ContentPage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,9 +16,7 @@ public class ContentLocation {
     private Product productId;
     @ManyToOne
     private ParseSite siteForParseParamId;
-    @ManyToOne
-    private FieldContentType fieldContentTypeId;
-    @ManyToOne
-    private Region regionId;
+
+
 
 }
