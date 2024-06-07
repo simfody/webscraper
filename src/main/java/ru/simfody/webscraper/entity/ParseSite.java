@@ -11,4 +11,6 @@ public class ParseSite {
     @Column(length = 25, nullable = false)
     private String name;
     private int minSecondsBetweenRequests = 10;
+    @ManyToOne
+    private Region regionId;
 }
