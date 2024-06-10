@@ -10,8 +10,8 @@ public class Worker {
     private Long id;
     @Column(length = 25, nullable = false)
     private String name;
+    @Column(length = 255, nullable = false, unique = true)
+    private String email;
     @ManyToOne
     private Client clientId;
-    @Column(length = 255, nullable = false)
-    private String email;
 }
