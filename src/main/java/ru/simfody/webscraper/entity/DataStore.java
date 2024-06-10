@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 
 // 03.06.2024
 @Entity
-public class CollectedDataStore {
+public class DataStore {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
