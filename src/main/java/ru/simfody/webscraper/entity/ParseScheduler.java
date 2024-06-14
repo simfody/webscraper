@@ -21,9 +21,9 @@ public class ParseScheduler {
     private int second = - 1;             //(0-59) <- '-1' - is "*"
     private int minute = - 1;             // (0 - 59) <- '-1' - is "*"
     private int hour = - 1;               // (0 - 23) <- '-1' - is "*"
-    private int dayOfTheMonth = - 1;      //  (1 - 31) <- '-1' - is "*"
-    private int month = - 1;              //   (1 - 12) (or JAN-DEC)  <- '-1' - is "*"
-    private int dayOfTheWeek = - 1;       //   dayOfTheWeek (1 - 7 -> MON-SUN)
+    private int dayOfTheMonth [] = new int[31]; //  (1 - 31) <- empty is "*"
+    private int month[] = new int[12];          //   (1 - 12) (or JAN-DEC)  <- empty - is "*"
+    private int dayOfTheWeek[] = new int[7];    //   dayOfTheWeek (1 - 7 -> MON-SUN) <- empty - is "*"
     @ManyToOne
     private ParseSite siteForParseParamId;
 }
