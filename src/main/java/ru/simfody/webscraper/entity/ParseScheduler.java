@@ -18,14 +18,14 @@ public class ParseScheduler {
      │ │ │ │ │ ┌───────────── day of the week (0 - 7)
      │ │ │ │ │ │          (0 or 7 is Sunday, or MON-SUN)
     */
+    @ManyToOne
+    private Client clientId; // 17.06.2024
+    @ManyToOne
+    private ParseSite siteForParseParamId;
     private int second = - 1;             //(0-59) <- '-1' - is "*"
     private int minute = - 1;             // (0 - 59) <- '-1' - is "*"
     private int hour = - 1;               // (0 - 23) <- '-1' - is "*"
     private int dayOfTheMonth [] = new int[31]; //  (1 - 31) <- empty is "*"
     private int month[] = new int[12];          //   (1 - 12) (or JAN-DEC)  <- empty - is "*"
     private int dayOfTheWeek[] = new int[7];    //   dayOfTheWeek (1 - 7 -> MON-SUN) <- empty - is "*"
-    @ManyToOne
-    private Client clientId; // 17.06.2024
-    @ManyToOne
-    private ParseSite siteForParseParamId;
 }
