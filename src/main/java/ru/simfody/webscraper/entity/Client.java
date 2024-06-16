@@ -10,4 +10,6 @@ public class Client {
     private Long id;
     @Column(length = 25, nullable = false, unique = true)
     private String name;
+    @Column(length = 1024, nullable = false, unique = true)
+    private String sqlQuery;
 }
