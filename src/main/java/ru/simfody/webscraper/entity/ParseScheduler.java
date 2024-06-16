@@ -25,5 +25,7 @@ public class ParseScheduler {
     private int month[] = new int[12];          //   (1 - 12) (or JAN-DEC)  <- empty - is "*"
     private int dayOfTheWeek[] = new int[7];    //   dayOfTheWeek (1 - 7 -> MON-SUN) <- empty - is "*"
     @ManyToOne
+    private Client clientId; // 17.06.2024
+    @ManyToOne
     private ParseSite siteForParseParamId;
 }
