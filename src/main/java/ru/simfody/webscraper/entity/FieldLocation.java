@@ -9,7 +9,7 @@ public class FieldLocation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    private ContentPage contentPageId;
+    private Page contentPageId;
     @ManyToOne
     private FieldContentType fieldContentTypeId;
     @Column(length = 25, nullable = false)
