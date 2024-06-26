@@ -13,7 +13,7 @@ public class Page {
     @ManyToOne
     private Client clientId;
     @ManyToOne
-    private MainObject productId;
+    private MainParsingObject productId;
     @ManyToOne
     private ParseSite siteForParseParamId;
 

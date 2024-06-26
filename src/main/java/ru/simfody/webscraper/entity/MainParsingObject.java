@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 // 03.06.2024
 @Entity
-public class MainObject { // Product or other parse object ...
+public class MainParsingObject { // Product or other parse object ...
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
