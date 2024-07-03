@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 // 03.06.2024
 @Entity
-public class Page {
+public class Url {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -13,9 +13,9 @@ public class Page {
     @ManyToOne
     private Client clientId;
     @ManyToOne
-    private ParsingObject productId;
+    private ParsingObject parsingObjectId;
     @ManyToOne
-    private ParseSite siteForParseParamId;
+    private SiteParam siteParamId;
 
 
 

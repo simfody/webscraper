@@ -4,12 +4,14 @@ import jakarta.persistence.*;
 
 // 07.06.2024
 @Entity
-public class FieldLocation {
+public class XPath {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    private Page contentPageId;
+    private SiteParam siteParamId;
+    @ManyToOne
+    private Url contentPageId;
     @ManyToOne
     private FieldContentType fieldContentTypeId;
     @Column(length = 25, nullable = false)

@@ -21,7 +21,7 @@ public class ParseScheduler {
     @ManyToOne
     private Client clientId; // 17.06.2024
     @ManyToOne
-    private ParseSite siteForParseParamId;
+    private SiteParam siteForParseParamId;
     private int second = - 1;             //(0-59) <- '-1' - is "*"
     private int minute = - 1;             // (0 - 59) <- '-1' - is "*"
     private int hour = - 1;               // (0 - 23) <- '-1' - is "*"
