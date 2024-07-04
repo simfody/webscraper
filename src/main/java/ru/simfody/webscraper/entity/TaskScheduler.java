@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 // 14.06.2024
 @Entity
-public class ParseScheduler {
+public class TaskScheduler {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,7 +21,7 @@ public class ParseScheduler {
     @ManyToOne
     private Client clientId; // 17.06.2024
     @ManyToOne
-    private SiteParam siteForParseParamId;
+    private ParsingObject parsingObjectId;
     private int second = - 1;             //(0-59) <- '-1' - is "*"
     private int minute = - 1;             // (0 - 59) <- '-1' - is "*"
     private int hour = - 1;               // (0 - 23) <- '-1' - is "*"
