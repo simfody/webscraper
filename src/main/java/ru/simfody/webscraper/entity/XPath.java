@@ -9,9 +9,9 @@ public class XPath {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    private SiteParam siteParamId;
+    private ParsingObject parsingObjectId;
     @ManyToOne
-    private Url contentPageId;
+    private Url urlId;
     @ManyToOne
     private FieldContentType fieldContentTypeId;
     @Column(length = 25, nullable = false)

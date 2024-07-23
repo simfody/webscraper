@@ -14,9 +14,5 @@ public class Url {
     private Client clientId;
     @ManyToOne
     private ParsingObject parsingObjectId;
-    @ManyToOne
-    private SiteParam siteParamId;
-
-
 
 }
