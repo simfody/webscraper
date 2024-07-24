@@ -19,9 +19,9 @@ public class TaskScheduler {
      │ │ │ │ │ │          (0 or 7 is Sunday, or MON-SUN)
     */
     @ManyToOne
-    private Client clientId; // 17.06.2024
+    private Client clientId; // 17.06.2024 >>> if not null then 'parsingObjectId' must be null
     @ManyToOne
-    private ParsingObject parsingObjectId;
+    private ParsingObject parsingObjectId; //  >>> if not null then 'clientId' must be null
     private int second = - 1;             //(0-59) <- '-1' - is "*"
     private int minute = - 1;             // (0 - 59) <- '-1' - is "*"
     private int hour = - 1;               // (0 - 23) <- '-1' - is "*"
