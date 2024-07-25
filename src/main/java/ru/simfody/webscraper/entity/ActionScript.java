@@ -8,8 +8,8 @@ public class ActionScript {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(length = 255, nullable = false)
-    private String url;
     @ManyToOne
-    private ParsingObject parsingObjectId;
+    private SiteParam siteParamId; //  >>> if not null then 'parsingObjectId' must be null
+    @ManyToOne
+    private ParsingObject parsingObjectId; //  >>> if not null then 'siteParamId' must be null
 }
