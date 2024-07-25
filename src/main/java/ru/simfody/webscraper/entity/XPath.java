@@ -9,9 +9,9 @@ public class XPath {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    private ParsingObject parsingObjectId;
+    private ParsingObject parsingObjectId; //  >>> if not null then 'urlId' must be null
     @ManyToOne
-    private Url urlId;
+    private Url urlId; //  >>> if not null then 'parsingObjectId' must be null
     @ManyToOne
     private FieldContentType fieldContentTypeId;
     @Column(length = 25, nullable = false)
