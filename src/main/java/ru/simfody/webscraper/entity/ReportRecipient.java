@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 // 10.06.2024
 @Entity
-public class Worker {
+public class ReportRecipient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -14,4 +14,6 @@ public class Worker {
     private String email;
     @ManyToOne
     private Client clientId;
+    @Column(length = 1024, nullable = false, unique = true)
+    private String sqlQuery;
 }
